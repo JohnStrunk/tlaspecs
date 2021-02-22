@@ -1,0 +1,362 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running breadth-first search Model-Checking with fp 3 and seed -3366143728190154376 with 4 workers on 8 cores with 2363MB heap and 5313MB offheap memory [pid: 47062] (Linux 5.10.16-200.fc33.x86_64 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file /home/jstrunk/src/tlaplus/tlaspecs/KnightsBridge/KnightsBridge.toolbox/Model_1/MC.tla
+Parsing file /home/jstrunk/src/tlaplus/tlaspecs/KnightsBridge/KnightsBridge.toolbox/Model_1/KnightsBridge.tla
+Parsing file /home/jstrunk/src/tlaplus/toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/TLC.tla
+Parsing file /home/jstrunk/src/tlaplus/toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Integers.tla
+Parsing file /home/jstrunk/src/tlaplus/toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/FiniteSets.tla
+Parsing file /home/jstrunk/src/tlaplus/toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Naturals.tla
+Parsing file /home/jstrunk/src/tlaplus/toolbox/plugins/org.lamport.tlatools_1.0.0.202012311918/tla2sany/StandardModules/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module KnightsBridge
+Semantic processing of module TLC
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2021-02-22 16:29:13)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated at 2021-02-22 16:29:14.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant inv_16140293529815000 is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ Knights = { [side |-> "Near", time |-> 1],
+  [side |-> "Near", time |-> 2],
+  [side |-> "Near", time |-> 5],
+  [side |-> "Near", time |-> 8] }
+/\ TorchSide = "Near"
+/\ ElapsedTime = 0
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <NearToFar line 76, col 14 to line 85, col 34 of module KnightsBridge>
+/\ Knights = { [side |-> "Near", time |-> 5],
+  [side |-> "Near", time |-> 8],
+  [side |-> "Far", time |-> 1],
+  [side |-> "Far", time |-> 2] }
+/\ TorchSide = "Far"
+/\ ElapsedTime = 2
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <FarToNear line 87, col 14 to line 96, col 35 of module KnightsBridge>
+/\ Knights = { [side |-> "Near", time |-> 1],
+  [side |-> "Near", time |-> 5],
+  [side |-> "Near", time |-> 8],
+  [side |-> "Far", time |-> 2] }
+/\ TorchSide = "Near"
+/\ ElapsedTime = 3
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <NearToFar line 76, col 14 to line 85, col 34 of module KnightsBridge>
+/\ Knights = { [side |-> "Near", time |-> 1],
+  [side |-> "Far", time |-> 2],
+  [side |-> "Far", time |-> 5],
+  [side |-> "Far", time |-> 8] }
+/\ TorchSide = "Far"
+/\ ElapsedTime = 11
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <FarToNear line 87, col 14 to line 96, col 35 of module KnightsBridge>
+/\ Knights = { [side |-> "Near", time |-> 1],
+  [side |-> "Near", time |-> 2],
+  [side |-> "Far", time |-> 5],
+  [side |-> "Far", time |-> 8] }
+/\ TorchSide = "Near"
+/\ ElapsedTime = 13
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <NearToFar line 76, col 14 to line 85, col 34 of module KnightsBridge>
+/\ Knights = { [side |-> "Far", time |-> 1],
+  [side |-> "Far", time |-> 2],
+  [side |-> "Far", time |-> 5],
+  [side |-> "Far", time |-> 8] }
+/\ TorchSide = "Far"
+/\ ElapsedTime = 15
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2021-02-22 16:29:14
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2773:0 @!@!@
+<Init line 55, col 1 to line 55, col 4 of module KnightsBridge>: 2:2
+@!@!@ENDMSG 2773 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 55, col 9 to line 62, col 26 of module KnightsBridge: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<NearToFar line 76, col 1 to line 76, col 9 of module KnightsBridge>: 641:2006
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 76, col 17 to line 76, col 34 of module KnightsBridge: 1459
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 76, col 17 to line 76, col 25 of module KnightsBridge: 1003
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 78, col 21 to line 78, col 46 of module KnightsBridge: 8394
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 78, col 21 to line 78, col 42 of module KnightsBridge: 7302
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 78, col 51 to line 78, col 76 of module KnightsBridge: 8215
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 78, col 51 to line 78, col 72 of module KnightsBridge: 7302
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 79, col 41 to line 79, col 55 of module KnightsBridge: 9841
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 79, col 41 to line 79, col 46 of module KnightsBridge: 6923
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 79, col 30 to line 79, col 38 of module KnightsBridge: 4565
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 80, col 21 to line 83, col 49 of module KnightsBridge: 2005
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  |line 80, col 32 to line 83, col 49 of module KnightsBridge: 2006:14776
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 80, col 34 to line 82, col 39 of module KnightsBridge: 8024
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 80, col 37 to line 80, col 51 of module KnightsBridge: 8024
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 81, col 39 to line 81, col 65 of module KnightsBridge: 2920
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 82, col 39 to line 82, col 39 of module KnightsBridge: 5104
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 83, col 42 to line 83, col 48 of module KnightsBridge: 2006
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 84, col 21 to line 84, col 79 of module KnightsBridge: 2005
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 84, col 36 to line 84, col 79 of module KnightsBridge: 2006
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 84, col 36 to line 84, col 46 of module KnightsBridge: 2006
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 84, col 50 to line 84, col 79 of module KnightsBridge: 2006
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 35, col 11 to line 35, col 49 of module KnightsBridge: 2006
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 35, col 29 to line 35, col 48 of module KnightsBridge: 2920
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 35, col 41 to line 35, col 48 of module KnightsBridge: 4748
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 35, col 38 to line 35, col 38 of module KnightsBridge: 2920
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 35, col 24 to line 35, col 24 of module KnightsBridge: 2006
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  |||line 84, col 54 to line 84, col 78 of module KnightsBridge: 2006:10588
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 84, col 55 to line 84, col 60 of module KnightsBridge: 2920
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 84, col 69 to line 84, col 77 of module KnightsBridge: 2006
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  line 77, col 34 to line 77, col 47 of module KnightsBridge: 457:16793
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 85, col 17 to line 85, col 34 of module KnightsBridge: 2005
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<FarToNear line 87, col 1 to line 87, col 9 of module KnightsBridge>: 629:2035
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 87, col 17 to line 87, col 33 of module KnightsBridge: 1545
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 87, col 17 to line 87, col 25 of module KnightsBridge: 999
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 89, col 21 to line 89, col 46 of module KnightsBridge: 9906
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 89, col 21 to line 89, col 42 of module KnightsBridge: 8736
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 89, col 51 to line 89, col 76 of module KnightsBridge: 9601
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 89, col 51 to line 89, col 72 of module KnightsBridge: 8736
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 90, col 41 to line 90, col 54 of module KnightsBridge: 9225
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 90, col 41 to line 90, col 46 of module KnightsBridge: 6325
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 90, col 30 to line 90, col 38 of module KnightsBridge: 5460
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 91, col 21 to line 94, col 49 of module KnightsBridge: 2035
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  |line 91, col 32 to line 94, col 49 of module KnightsBridge: 2035:14333
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 91, col 34 to line 93, col 39 of module KnightsBridge: 8140
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 91, col 37 to line 91, col 51 of module KnightsBridge: 8140
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 92, col 39 to line 92, col 66 of module KnightsBridge: 2900
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 93, col 39 to line 93, col 39 of module KnightsBridge: 5240
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 94, col 42 to line 94, col 48 of module KnightsBridge: 2035
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 95, col 21 to line 95, col 79 of module KnightsBridge: 2035
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 95, col 36 to line 95, col 79 of module KnightsBridge: 2035
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 95, col 36 to line 95, col 46 of module KnightsBridge: 2035
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 95, col 50 to line 95, col 79 of module KnightsBridge: 2035
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 35, col 11 to line 35, col 49 of module KnightsBridge: 2035
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 35, col 29 to line 35, col 48 of module KnightsBridge: 2900
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 35, col 41 to line 35, col 48 of module KnightsBridge: 4630
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 35, col 38 to line 35, col 38 of module KnightsBridge: 2900
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 35, col 24 to line 35, col 24 of module KnightsBridge: 2035
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  |||line 95, col 54 to line 95, col 78 of module KnightsBridge: 2035:10430
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 95, col 55 to line 95, col 60 of module KnightsBridge: 2900
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 95, col 69 to line 95, col 77 of module KnightsBridge: 2035
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2775:0 @!@!@
+  line 88, col 34 to line 88, col 47 of module KnightsBridge: 546:19131
+@!@!@ENDMSG 2775 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 96, col 17 to line 96, col 35 of module KnightsBridge: 2035
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<TypeOk line 42, col 1 to line 42, col 6 of module KnightsBridge>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 42, col 11 to line 44, col 32 of module KnightsBridge: 1271
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 42, col 14 to line 42, col 46 of module KnightsBridge: 1271
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 42, col 32 to line 42, col 46 of module KnightsBridge: 5084
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 42, col 23 to line 42, col 29 of module KnightsBridge: 1271
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 43, col 14 to line 43, col 31 of module KnightsBridge: 1271
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 44, col 14 to line 44, col 32 of module KnightsBridge: 1271
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<inv_16140293529815000 line 5, col 1 to line 5, col 21 of module MC>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 6, col 1 to line 6, col 17 of module MC: 1271
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 6, col 1 to line 6, col 9 of module MC: 1271
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 114, col 14 to line 115, col 33 of module KnightsBridge: 1271
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 114, col 17 to line 114, col 48 of module KnightsBridge: 1271
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 114, col 35 to line 114, col 48 of module KnightsBridge: 1385
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 114, col 26 to line 114, col 32 of module KnightsBridge: 1271
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 115, col 17 to line 115, col 33 of module KnightsBridge: 38
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 6, col 13 to line 6, col 17 of module MC: 1271
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(10) at 2021-02-22 16:29:14: 4,014 states generated (184,410 s/min), 1,271 distinct states found (58,392 ds/min), 272 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+4014 states generated, 1271 distinct states found, 272 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 10.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2268:0 @!@!@
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 10 and the 95th percentile is 5).
+@!@!@ENDMSG 2268 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 1318ms at (2021-02-22 16:29:14)
+@!@!@ENDMSG 2186 @!@!@
