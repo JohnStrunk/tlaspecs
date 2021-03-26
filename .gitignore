@@ -1,0 +1,9 @@
+# TLA+ Toolbox
+**/*.toolbox/model
+**/*.toolbox/*aux
+**/*.toolbox/*.log
+**/*.toolbox/*.tex
+**/*.toolbox/*_SnapShot_*.launch
+**/*.toolbox/**/*.tla
+**/*.toolbox/**/*.out
+**/*.toolbox/**/MC.cfg
